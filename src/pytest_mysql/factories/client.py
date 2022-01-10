@@ -78,7 +78,9 @@ def mysql(
         return mysql_conn
 
     @pytest.fixture
-    def mysql_fixture(request: FixtureRequest) -> MySQLdb.Connection:
+    def mysql_fixture(
+            request: FixtureRequest
+    ) -> MySQLdb.Connection:
         """
         Client fixture for MySQL server.
 
