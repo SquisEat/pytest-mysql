@@ -59,7 +59,7 @@ def mysql(
     """
 
     def _connect(
-            connect_kwargs: dict, query_str: str, mysql_db: str
+        connect_kwargs: dict, query_str: str, mysql_db: str
     ) -> MySQLdb.Connection:
         """Apply given query to a  given MySQLdb connection."""
         mysql_conn: MySQLdb.Connection = MySQLdb.connect(**connect_kwargs)
@@ -78,9 +78,7 @@ def mysql(
         return mysql_conn
 
     @pytest.fixture
-    def mysql_fixture(
-            request: FixtureRequest
-    ) -> MySQLdb.Connection:
+    def mysql_fixture(request: FixtureRequest) -> MySQLdb.Connection:
         """
         Client fixture for MySQL server.
 
